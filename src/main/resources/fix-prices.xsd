@@ -1,0 +1,40 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://fx.code.alex.piratecat.de/"
+           targetNamespace="http://fx.code.alex.piratecat.de/" elementFormDefault="qualified">
+
+    <xs:element name="getFixPriceRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="arg0" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getFixPriceResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="quoteObject" type="tns:quote"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="quote">
+        <xs:sequence>
+            <xs:element name="firstCalculatedAmount" type="xs:decimal" minOccurs="0"/>
+            <xs:element name="firstExchangeRate" type="xs:decimal" minOccurs="0"/>
+            <xs:element name="quoteId" type="xs:string" minOccurs="0"/>
+            <xs:element name="requestAmount" type="xs:decimal" minOccurs="0"/>
+            <xs:element name="secondCalculatedAmount" type="xs:decimal" minOccurs="0"/>
+            <xs:element name="secondExchangeRate" type="xs:decimal" minOccurs="0"/>
+            <xs:element name="symbol" type="xs:string" minOccurs="0"/>
+            <xs:element name="transactionType" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- <xs:simpleType name="currency">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="GBP"/>
+            <xs:enumeration value="EUR"/>
+            <xs:enumeration value="PLN"/>
+        </xs:restriction>
+    </xs:simpleType> -->
+</xs:schema>

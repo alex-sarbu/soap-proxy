@@ -1,0 +1,9 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+				  xmlns:gs="http://fx.code.alex.piratecat.de/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <gs:getFixPriceRequest>
+         <gs:arg0>test1</gs:arg0>
+      </gs:getFixPriceRequest>
+   </soapenv:Body>
+</soapenv:Envelope>
