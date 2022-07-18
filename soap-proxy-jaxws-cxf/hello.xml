@@ -1,0 +1,9 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+				  xmlns:gs="http://service.ws.proxy.soap.alex.com/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <gs:sayHello>
+         <myname>Alex</myname>
+      </gs:sayHello>
+   </soapenv:Body>
+</soapenv:Envelope>
